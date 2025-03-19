@@ -1,13 +1,11 @@
 
 numbers = int(input("Enter a 5-digit integer : "))
+n1=numbers%10*10000
+n2=numbers%100//10*1000
+n3=numbers%1000//100*100
+n4=numbers//1000%10*10
+n5 = numbers//10000
+answer = n1 + n2 + n3 + n4 + n5
+print("Перевернута цифра: ", answer)
+print(n1,n2,n3,n4,n5)
 
-revers_number_type_str = str(numbers % 10) + str(numbers // 10%10) + str(numbers // 100%10) + str(numbers // 1000%10) + str(numbers // 10000)
-
-change_type_to_int = int(revers_number_type_str)
-# Якщо необхідний тип 'Str'
-print(type(revers_number_type_str))
-print(revers_number_type_str)
-print("---------------------")
-# В разі необхідно тип 'Int'
-print(type(change_type_to_int))
-print(change_type_to_int)
